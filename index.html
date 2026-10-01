@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>European Courtyard — Interactive Landscape Portfolio</title>
+  <meta name="description" content="Interactive landscape architecture portfolio — European Courtyard." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <div class="progress"><span></span></div>
+
+  <header class="site-nav">
+    <a class="brand" href="#top"><span>01</span> EUROPEAN COURTYARD</a>
+    <nav>
+      <a href="#concept">Concept</a>
+      <a href="#plan">Plan</a>
+      <a href="#nodes">Nodes</a>
+      <a href="#details">Details</a>
+    </nav>
+    <button class="menu-btn" aria-label="打开目录"><span></span><span></span></button>
+  </header>
+
+  <aside class="menu-panel" aria-hidden="true">
+    <button class="close-menu">×</button>
+    <p class="eyebrow">PROJECT 01 / COURTYARD LANDSCAPE</p>
+    <h2>Explore the<br><em>garden.</em></h2>
+    <div class="menu-grid">
+      <a href="#top">01 — Cover</a>
+      <a href="#concept">02 — Design Direction</a>
+      <a href="#sketch">03 — Concept Sketches</a>
+      <a href="#plan">04 — Masterplan</a>
+      <a href="#journey">05 — Plan Annotation</a>
+      <a href="#nodes">06 — Landscape Nodes</a>
+      <a href="#analysis">07 — Design Analysis</a>
+      <a href="#details">08 — Detail Language</a>
+      <a href="#perspective">09 — Perspectives</a>
+    </div>
+  </aside>
+
+  <main id="top">
+    <section class="hero section-dark">
+      <div class="hero-image parallax" data-speed="0.08"></div>
+      <div class="hero-wash"></div>
+      <div class="hero-flower"></div>
+      <div class="hero-content">
+        <p class="eyebrow reveal">PROJECT 01 / LANDSCAPE</p>
+        <h1 class="reveal">European<br><em>Courtyard</em></h1>
+        <p class="hero-sub reveal">Water / Stone / Hedge / Lawn</p>
+        <div class="hero-meta reveal">
+          <span>Design by Chen Ruixin</span>
+          <span>2026</span>
+          <span>Scroll to enter ↓</span>
+        </div>
+      </div>
+      <div class="hero-stamp">COURTYARD<br><small>LANDSCAPE STUDY</small></div>
+    </section>
+
+    <section id="concept" class="intro section-light">
+      <div class="section-kicker">01 / DESIGN DIRECTION</div>
+      <div class="intro-copy">
+        <p class="eyebrow">FROM OPEN COURT TO GARDEN ROOMS</p>
+        <h2>A formal core softened<br>by an <em>organic water garden.</em></h2>
+        <p class="lead">庭院以水岛与欧洲花境为特色，曲水围合形成水岛，搭配层次丰富的欧洲花境，结合休憩平台与喷泉节点，营造富有欧式自然氛围的休闲庭院。</p>
+      </div>
+      <div class="principles">
+        <button class="principle active" data-principle="axis"><b>01</b><span>AXIS</span><small>入口—中心—景观点</small></button>
+        <button class="principle" data-principle="frame"><b>02</b><span>FRAME</span><small>建筑边界 × 绿篱</small></button>
+        <button class="principle" data-principle="reflection"><b>03</b><span>REFLECTION</span><small>水面作为柔性界面</small></button>
+        <button class="principle" data-principle="garden"><b>04</b><span>GARDEN ROOM</span><small>可停留、可漫游</small></button>
+      </div>
+      <div class="principle-stage">
+        <div class="stage-line"></div>
+        <div class="stage-number">01</div>
+        <h3>AXIS</h3>
+        <p>以入口—中心—景观点形成清晰的视觉秩序。</p>
+      </div>
+    </section>
+
+    <section id="sketch" class="sketch section-light">
+      <div class="section-kicker">02 / CONCEPT SKETCHES</div>
+      <div class="sketch-layout">
+        <div class="sketch-image frame-card reveal-card">
+          <img src="assets/image5.png" alt="概念草图" />
+          <button class="hotspot sketch-hot h1" data-modal="massing">01</button>
+          <button class="hotspot sketch-hot h2" data-modal="atmosphere">02</button>
+        </div>
+        <div class="sketch-copy">
+          <p class="eyebrow">HAND-DRAWN EXPLORATION</p>
+          <h2>Let the water<br><em>become a path.</em></h2>
+          <p>手绘作品保留设计推演的触感。点击草图上的编号，查看它如何转化为最终空间。</p>
+          <div class="mini-note"><span>01</span><b>MASSING</b><small>边界先行，空间后生长</small></div>
+          <div class="mini-note"><span>02</span><b>ATMOSPHERE</b><small>让水成为第二条路径</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="plan" class="plan-section section-dark">
+      <div class="section-kicker light">03 / MASTERPLAN</div>
+      <div class="plan-head">
+        <div>
+          <p class="eyebrow">CLICK THE PLAN</p>
+          <h2>Read the garden<br><em>as a system.</em></h2>
+        </div>
+        <p>点击平面中的区域。图像本身就是导航：水院、主庭院、花园与草坪会把你带入不同的设计逻辑。</p>
+      </div>
+      <div class="plan-board">
+        <img src="assets/image6.png" alt="庭院总平面" />
+        <button class="plan-hot hot-court" data-plan="court"><span></span><b>01</b> CENTRAL COURT</button>
+        <button class="plan-hot hot-water" data-plan="water"><span></span><b>02</b> WATER GARDEN</button>
+        <button class="plan-hot hot-formal" data-plan="formal"><span></span><b>03</b> FORMAL GARDEN</button>
+        <button class="plan-hot hot-lawn" data-plan="lawn"><span></span><b>04</b> LAWN ROOM</button>
+      </div>
+      <div class="plan-info" id="planInfo">
+        <span>SELECT A ZONE</span><strong>Click a highlighted area</strong>
+      </div>
+    </section>
+
+    <section id="journey" class="journey section-light">
+      <div class="section-kicker">04 / PLAN ANNOTATION</div>
+      <div class="journey-head">
+        <p class="eyebrow">A SEQUENCE OF THRESHOLDS & VIEWS</p>
+        <h2>Move through the<br><em>garden.</em></h2>
+      </div>
+      <div class="journey-map">
+        <img src="assets/image7.jpeg" alt="平面图注释" />
+        <div class="route route-a"></div>
+        <div class="route route-b"></div>
+        <button class="journey-hot j1" data-journey="arrive">01 <small>ARRIVE</small></button>
+        <button class="journey-hot j2" data-journey="discover">02 <small>DISCOVER</small></button>
+        <button class="journey-hot j3" data-journey="pause">03 <small>PAUSE</small></button>
+        <button class="journey-hot j4" data-journey="release">04 <small>RELEASE</small></button>
+        <button class="journey-hot j5" data-journey="water-island">05 <small>WATER ISLAND</small></button>
+        <button class="journey-hot j6" data-journey="bridge">06 <small>BRIDGE</small></button>
+        <button class="journey-hot j7" data-journey="fountain">07 <small>FOUNTAIN</small></button>
+      </div>
+      <div class="journey-caption" id="journeyCaption">点击路径节点，查看空间体验。</div>
+    </section>
+
+    <section id="nodes" class="nodes section-dark">
+      <div class="section-kicker light">05 / LANDSCAPE NODES</div>
+      <div class="nodes-grid">
+        <div class="nodes-image">
+          <img src="assets/image1.jpeg" alt="鸟瞰庭院" />
+          <button class="node-hot n1" data-node="water-island"><i></i><span>WATER<br>ISLAND</span></button>
+          <button class="node-hot n2" data-node="bridge"><i></i><span>BRIDGE<br>WALK</span></button>
+          <button class="node-hot n3" data-node="fountain"><i></i><span>FORMAL<br>FOUNTAIN</span></button>
+        </div>
+        <div class="nodes-copy">
+          <p class="eyebrow">THREE MOMENTS</p>
+          <h2>Identity lives<br>in the <em>details.</em></h2>
+          <div class="node-list">
+            <button data-node="water-island"><span>01</span><b>WATER ISLAND</b><small>植物岛把水面从功能转化为景观核心。</small></button>
+            <button data-node="bridge"><span>02</span><b>BRIDGE WALK</b><small>木桥制造节奏，形成动态的穿越体验。</small></button>
+            <button data-node="fountain"><span>03</span><b>FORMAL FOUNTAIN</b><small>对称花园为自然水院提供秩序性的对景。</small></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="analysis" class="analysis section-light">
+      <div class="section-kicker">06 / DESIGN ANALYSIS</div>
+      <div class="analysis-head"><p class="eyebrow">A SIMPLE ANALYTICAL LANGUAGE</p><h2>Geometry, water,<br><em>planting.</em></h2></div>
+      <div class="analysis-cards">
+        <button class="analysis-card active" data-analysis="circulation"><span>01</span><b>CIRCULATION</b><div class="diagram circulation"></div><small>入口 → 中央庭院 → 水院 → 花园</small></button>
+        <button class="analysis-card" data-analysis="water"><span>02</span><b>WATER SYSTEM</b><div class="diagram water"></div><small>水体作为边界与路径的柔性界面</small></button>
+        <button class="analysis-card" data-analysis="planting"><span>03</span><b>PLANTING</b><div class="diagram planting"></div><small>乔木背景 + 灌木层次 + 季相花境</small></button>
+      </div>
+      <div class="analysis-detail" id="analysisDetail">CIRCULATION — 让动线从入口收束，再被水面向左展开。</div>
+    </section>
+
+    <section id="details" class="details section-light">
+      <div class="section-kicker">07 / DETAIL LANGUAGE</div>
+      <div class="detail-layout">
+        <div class="detail-photo"><img src="assets/image4.jpeg" alt="欧洲花境植物" /><span>PLANTING PALETTE</span></div>
+        <div class="detail-copy">
+          <p class="eyebrow">MATERIAL / PLANTING</p>
+          <h2>Restraint in material.<br><em>Richness in planting.</em></h2>
+          <div class="material-list">
+            <button data-detail="stone"><i></i><b>浅色石材</b><small>Light stone</small></button>
+            <button data-detail="wood"><i></i><b>暖木色桥面</b><small>Warm timber</small></button>
+            <button data-detail="hedge"><i></i><b>深绿修剪绿篱</b><small>Clipped hedge</small></button>
+            <button data-detail="water"><i></i><b>柔和水面</b><small>Soft water</small></button>
+          </div>
+          <div class="detail-pop" id="detailPop">选择一种材料查看它在空间中的作用。</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="perspective" class="perspective section-dark">
+      <div class="section-kicker light">08 / PERSPECTIVES</div>
+      <div class="perspective-top"><p class="eyebrow">EXPERIENCE</p><h2>A garden that shifts<br>between <em>geometry & softness.</em></h2></div>
+      <div class="perspective-stage">
+        <div class="perspective-main"><img id="perspectiveImg" src="assets/image10.png" alt="庭院鸟瞰透视" /></div>
+        <div class="perspective-side">
+          <button class="persp-btn active" data-img="assets/image10.png"><span>01</span> AERIAL</button>
+          <button class="persp-btn" data-img="assets/image11.png"><span>02</span> HAND SKETCH</button>
+          <p>从入口的秩序感，到水院的松弛感，再到花园边界的静谧感，空间以连续的景观语言完成过渡。</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer section-light">
+      <div class="footer-mark">01</div>
+      <p class="eyebrow">PROJECT 01 / COURTYARD LANDSCAPE</p>
+      <h2>Thank you for<br><em>walking through.</em></h2>
+      <p class="footer-note">Water / Stone / Hedge / Lawn</p>
+    </footer>
+  </main>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card">
+      <button class="modal-close">×</button>
+      <p class="eyebrow" id="modalEyebrow"></p>
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
