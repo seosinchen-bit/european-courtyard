@@ -69,3 +69,238 @@ body.presentation-mode #presentationStage{display:flex}
 /* mobile touch-friendly */
 @media(max-width:900px){body{cursor:auto}.cursor-dot,.cursor-ring{display:none}.present-btn{display:none}.v3-rail{display:none}.frame-card:after,.nodes-image:after,.detail-photo:after,.perspective-main:after{display:none}.hero:after{display:none}.presentation-overlay{grid-template-columns:1fr}.presentation-copy{border-left:0;border-top:1px solid rgba(255,255,255,.35);padding:15px 0 0}}
 @media(max-width:600px){#imageLightbox{padding:12px}.lightbox-image{max-width:96vw;max-height:80vh}.lightbox-close{right:12px;top:12px}.lightbox-caption{bottom:12px;width:88%;white-space:normal}.presentation-title{font-size:58px}}
+/* =====================================================
+   GREEN MEMORY FLOATING WALL
+   ADD ONLY
+===================================================== */
+
+
+#dialogue {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* 漂浮留言 */
+
+.floating-memory {
+
+  position: absolute;
+
+  z-index: 5;
+
+  max-width: 220px;
+
+  padding: 12px 18px;
+
+
+  color: rgba(190,220,160,.75);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+
+  letter-spacing: .08em;
+
+
+  background:
+  rgba(80,110,70,.08);
+
+
+  backdrop-filter:
+  blur(5px);
+
+
+  border-radius: 30px;
+
+
+  pointer-events: auto;
+
+  cursor: default;
+
+
+  animation:
+  memoryFloat 18s linear infinite;
+
+
+  transition:
+  opacity .4s ease,
+  transform .4s ease;
+
+}
+
+
+
+.floating-memory:hover {
+
+  opacity:1;
+
+  transform:
+  scale(1.08);
+
+}
+
+
+
+/* 不同方向 */
+
+.float-left {
+
+  animation-name:
+  memoryFloatLeft;
+
+}
+
+
+.float-right {
+
+  animation-name:
+  memoryFloatRight;
+
+}
+
+
+
+
+
+@keyframes memoryFloat {
+
+
+0% {
+
+  transform:
+  translateY(80px);
+
+  opacity:0;
+
+}
+
+
+10% {
+
+  opacity:.8;
+
+}
+
+
+90% {
+
+  opacity:.8;
+
+}
+
+
+100% {
+
+  transform:
+  translateY(-500px);
+
+  opacity:0;
+
+}
+
+}
+
+
+
+
+
+@keyframes memoryFloatLeft {
+
+
+0% {
+
+ transform:
+ translateX(-100px)
+ translateY(100px);
+
+ opacity:0;
+
+}
+
+
+15% {
+
+ opacity:.8;
+
+}
+
+
+100% {
+
+ transform:
+ translateX(120px)
+ translateY(-500px);
+
+ opacity:0;
+
+}
+
+}
+
+
+
+
+@keyframes memoryFloatRight {
+
+
+0% {
+
+ transform:
+ translateX(100px)
+ translateY(100px);
+
+ opacity:0;
+
+}
+
+
+15% {
+
+ opacity:.8;
+
+}
+
+
+100% {
+
+ transform:
+ translateX(-120px)
+ translateY(-500px);
+
+ opacity:0;
+
+}
+
+}
+
+
+
+/* 用户留言墙 */
+
+.memory-user {
+
+border-left:
+1px solid rgba(160,200,130,.4);
+
+padding-left:15px;
+
+margin:15px 0;
+
+font-style:italic;
+
+}
+
+
+
+.memory-title {
+
+font-size:10px;
+
+letter-spacing:.2em;
+
+opacity:.4;
+
+margin-bottom:10px;
+
+}
