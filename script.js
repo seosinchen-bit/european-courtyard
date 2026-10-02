@@ -106,3 +106,278 @@ $$('button,a').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.c
 
 /* touch safety */
 if(innerWidth<900)document.body.style.cursor='auto';
+/* =====================================================
+   GREEN FLOATING MEMORY WALL
+   ADD ONLY
+===================================================== */
+
+
+(function(){
+
+
+const dialogue =
+document.querySelector("#dialogue");
+
+
+const answer =
+document.querySelector("#greenAnswer");
+
+
+const submit =
+document.querySelector("#submitAnswer");
+
+
+
+if(!dialogue || !answer || !submit){
+
+return;
+
+}
+
+
+
+/*
+  初始绿色记忆
+  模拟公共留言
+*/
+
+const greenMemories=[
+
+
+"绿色是小时候夏天树荫下的温度。",
+
+
+"雨后的叶子，会发出很轻的声音。",
+
+
+"我记得一片绿色，是因为那里有人陪伴。",
+
+
+"绿色不是颜色，而是一段停留的时间。",
+
+
+"森林让我想起慢下来的生活。",
+
+
+"The green I remember feels like home.",
+
+
+"Some colors disappear, but memories stay."
+
+
+
+];
+
+
+
+
+
+/*
+ 创建漂浮文字
+*/
+
+
+function createMemory(text){
+
+
+const item =
+document.createElement("div");
+
+
+item.className =
+"floating-memory";
+
+
+
+if(Math.random()>0.5){
+
+item.classList.add(
+"float-left"
+);
+
+}else{
+
+item.classList.add(
+"float-right"
+);
+
+}
+
+
+
+item.innerText =
+"🍃  "+text;
+
+
+
+item.style.left =
+Math.random()*75+10+"%";
+
+
+
+item.style.bottom =
+"-50px";
+
+
+
+item.style.animationDuration =
+(14+Math.random()*12)+"s";
+
+
+
+dialogue.appendChild(item);
+
+
+
+setTimeout(()=>{
+
+
+item.remove();
+
+
+},26000);
+
+
+
+}
+
+
+
+
+
+
+
+/*
+ 自动产生初始留言
+*/
+
+
+function startMemoryRain(){
+
+
+greenMemories.forEach(
+(text,index)=>{
+
+
+setTimeout(()=>{
+
+
+createMemory(text);
+
+
+},
+index*1800);
+
+
+});
+
+
+}
+
+
+
+startMemoryRain();
+
+
+
+
+
+
+/*
+ 用户自己的留言
+*/
+
+
+submit.addEventListener(
+"click",
+()=>{
+
+
+const text =
+answer.value.trim();
+
+
+
+if(!text){
+
+return;
+
+}
+
+
+
+/*
+ 保存到自己的浏览器
+*/
+
+
+let saved =
+JSON.parse(
+localStorage.getItem(
+"greenMemory"
+)
+)
+|| [];
+
+
+
+saved.push(text);
+
+
+
+localStorage.setItem(
+"greenMemory",
+JSON.stringify(saved)
+);
+
+
+
+
+
+createMemory(text);
+
+
+
+});
+
+
+
+
+
+
+/*
+ 重新打开网页
+ 读取自己的留言
+*/
+
+
+let old =
+JSON.parse(
+localStorage.getItem(
+"greenMemory"
+)
+)
+|| [];
+
+
+
+old.forEach(
+(text)=>{
+
+
+setTimeout(()=>{
+
+
+createMemory(text);
+
+
+},3000);
+
+
+});
+
+
+
+
+
+})();
